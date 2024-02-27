@@ -1,6 +1,13 @@
 <?php
-    $num1 = $_GET['num1'];
-    $num2 = $_GET['num2'];
-    $num3 = $num1 + $num2;
-    echo $num3;
+    $name = $_GET['name'];
+    $email = $_GET['email'];
+    $password = $_GET['password'];
+    if ($email == "anthony.silva@aluno.ifsp.edu.br" || $password == "12345" || $name == "Anthony")
+    {
+        echo $name . " foi logado com sucesso!";
+    } else
+    {
+        echo "Usuário, email e/ou senha incorreto(s)";
+        echo '<a href="http://localhost/PRW/Exemplo_PHP/form.html"> Voltar</a>';
+    }
 ?>
