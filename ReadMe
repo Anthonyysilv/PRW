@@ -4,3 +4,4 @@ Pasta da matéria de Programação para Web (PRW), dos professores Murilo e Cass
 ->Comandos git
     -> git config --global user.email "exemplo.email@gmail.com"
     -> git config --global user.name "UsernameExemplo"
+-> inicializar o xampp, junto ao apache, e para rodar o calculo (exe1.php), é só digitar no navegador http://localhost/PRW/Exemplo_PHP/exe1.php (exemplo 1 php).
