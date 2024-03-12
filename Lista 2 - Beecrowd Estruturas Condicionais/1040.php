@@ -16,18 +16,18 @@
     }
     elseif (($media >= 5.0) and ($media < 7.0)){
         echo "Aluno em exame.\n";
-        $score = readline();
-        echo "Nota do exame: {$score}\n";
-        $new_media = ($media + $score) / 2;
-        $new_media = number_format($new_media, 1, ".", "");
-        if ($new_media >= 5.0)
+        $pontuacao = readline();
+        echo "Nota do exame: {$pontuacao}\n";
+        $nova_media = ($media + $pontuacao) / 2;
+        $nova_media = number_format($nova_media, 1, ".", "");
+        if ($nova_media >= 5.0)
         {
             echo "Aluno aprovado.\n";
         }
         else{
             echo "Aluno reprovado.\n";
         }
-        echo "Media final: {$new_media}\n";
+        echo "Media final: {$nova_media}\n";
     }
 
 ?>
