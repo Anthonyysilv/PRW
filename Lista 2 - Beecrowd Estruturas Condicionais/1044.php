@@ -1,10 +1,12 @@
 <?php
-    list ($a, $b) = explode (' ', readline());
-    if (($a%$b) == 0 || ($b%$a) == 0)
-    {
-        echo "Sao multiplos\n";
-    } else
-    {
-        echo "Nao sao multiplos\n";
-    }
+  list($A, $B) = explode(' ', readline());
+  $A = (int) $A;
+  $B = (int) $B;
+  if((($A % $B) == 0) || (($B % $A) == 0))
+  {
+    echo "Sao Multiplos";
+  } else
+  {
+    echo "Nao sao Multiplos";
+  }
 ?>

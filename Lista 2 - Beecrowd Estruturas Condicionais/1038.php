@@ -2,7 +2,7 @@
 
     list($cod, $qtd) = explode(" ", readline());
     $cod = (int) $cod;
-    $qtd = (float) $qtd;
+    $qtd = (int) $qtd;
     if ($cod == 1){
         $qtd = 4.0 * $qtd;
         $qtd = number_format($qtd, 2, ".", "");
