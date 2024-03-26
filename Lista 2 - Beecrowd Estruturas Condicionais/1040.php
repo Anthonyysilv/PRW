@@ -1,33 +1,26 @@
 <?php
-
-    list($n1, $n2, $n3, $n4) = explode(" ", readline());
-    $n1 = (float) $n1;
-    $n2 = (float) $n2;
-    $n3 = (float) $n3;
-    $n4 = (float) $n4;
-    $media = (($n1 * 2) + ($n2 * 3) + ($n3 * 4) + ($n4 * 1)) / (2 + 3 + 4 + 1);
-    $media = number_format($media, 1, ".", "");
-    echo "Media: {$media}\n";
-    if ($media >= 7.0){
+$entrada = explode(" ", readline());
+$N1 = floatval($entrada[0]);
+$N2 = floatval($entrada[1]);
+$N3 = floatval($entrada[2]);
+$N4 = floatval($entrada[3]);
+$media = ((2 * $N1 + 3 * $N2 + 4 * $N3 + 1 * $N4) / 10);
+$media = intval($media * 10);
+$media = $media / 10;
+if ($media >= 5 && $media <= 6.9)
+    $notaExame = floatval(readline());
+echo "Media: " . number_format($media, 1, '.', '') . "\n";
+if ($media >= 7.0)
+    echo "Aluno aprovado.\n";
+elseif ($media < 5.0)
+    echo "Aluno reprovado.\n";
+elseif ($media >= 5 && $media <= 6.9) {
+    echo "Aluno em exame.\n";
+    echo "Nota do exame: " . number_format($notaExame, 1, '.', '') . "\n";
+    $media = ($media + $notaExame) / 2;
+    if ($media >= 5.0)
         echo "Aluno aprovado.\n";
-    }
-    elseif ($media < 5.0){
+    elseif ($media <= 4.9)
         echo "Aluno reprovado.\n";
-    }
-    elseif (($media >= 5.0) and ($media < 7.0)){
-        echo "Aluno em exame.\n";
-        $pontuacao = readline();
-        echo "Nota do exame: {$pontuacao}\n";
-        $nova_media = ($media + $pontuacao) / 2;
-        $nova_media = number_format($nova_media, 1, ".", "");
-        if ($nova_media >= 5.0)
-        {
-            echo "Aluno aprovado.\n";
-        }
-        else{
-            echo "Aluno reprovado.\n";
-        }
-        echo "Media final: {$nova_media}\n";
-    }
-
-?>
+    echo "Media final: " . number_format($media, 1, '.', '') . "\n";
+}
