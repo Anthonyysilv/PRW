@@ -20,6 +20,6 @@
                 $frase[$j]="S";
             }
         }
-        echo "%frase\n";
+        echo "$frase\n";
     }
 ?>
