@@ -7,26 +7,26 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="form.php" method="post">
+    <form action="recebe_dados.php" method="post">
         <div>
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username">
+            <input type="text" name="username" id="username" required>
             <label for="password">Senha:</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
         </div>
         <div>
             <label for="name">Nome:</label>
-            <input type="name" name="name" id="name">
+            <input type="text" name="name" id="name">
         </div>
         <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
+            <input type="text" name="email" id="email">
         </div>
         <div>
             <label for="cidade">Cidade:</label>
-            <input type="cidade" name="cidade" id="cidade">
+            <input type="text" name="cidade" id="cidade">
             <label for="estado">Estado:</label>
-            <input type="estado" name="estado" id="estado">
+            <input type="text" name="estado" id="estado">
         </div>
         <div>
             <button type="submit">Enviar</button>
