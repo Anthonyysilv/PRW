@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Viagem</title>
+</head>
+<body>
+    <h1>3107 Beecrowd</h1>
+    <form action="calc.php" method="post">
+        <div>
+            <label for="ve">Velocidade Média do Veículo (km/h):</label>
+            <input type="number" name="ve" id="ve" step="0.010">
+        </div>
+        <div>
+            <label for="km">Distância da Viagem (km):</label>
+            <input type="number" name="km" id="km" step="0.010">
+        </div>
+        <div>
+            <label for="co">Consumo Médio do Veículo (km/l):</label>
+            <input type="number" name="co" id="co" step="0.010">
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
