@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- comentários html
+    action => arquivo .php que será linkado
+    method => tipo de requisição http GET ou POST
+    -->
+    <h2>Escolha a opção desejada: </h2>
+    <h3>_________________________</h3>
+    <form action="ex1.php" method="get">
+        <input type="radio" name="opcao" value = "1"> Somar
+        <input type="radio" name="opcao" value = "2"> Subtrair
+        <input type="radio" name="opcao" value = "3"> Dividir
+        <input type="radio" name="opcao" value = "4"> Multiplicar
+        <div>
+            <label for="num1">Número 1:</label>
+            <input type="number" name="num1">
+        </div>
+        <div>
+            <label for="num2">Número 2:</label>
+            <input type="number" name="num2">
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+    
+</body>
+</html>
