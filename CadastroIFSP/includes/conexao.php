@@ -10,7 +10,7 @@
     //Verifica a conexão
     if (mysqli_connect_error())
     {
-        printf("Erro: conexão: %s", mysqli_connect_error());
+        printf("Erro de conexão: %s", mysqli_connect_error());
         exit();
     }
 ?>
