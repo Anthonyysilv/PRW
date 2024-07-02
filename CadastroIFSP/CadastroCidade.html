@@ -5,6 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro da Cidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
     <form action="CadastroCidade.php" method="post">
@@ -20,6 +102,7 @@
                     <option value="SP">SP</option>
                     <option value="RJ">RJ</option>
                     <option value="MG">MG</option>
+                    <option value="SE">SE</option>
                 </select>
             </div>
             <div>
@@ -27,6 +110,7 @@
             </div>
         </fieldset>
     </form>
-    <a href="ListarCidade.php">Consultar Cadastros</a>
+    <a href="ListarCidade.php" class="btn">Consultar Cadastros</a>
+    <a href="index.html" class="btn">Voltar à página inicial</a>
 </body>
 </html>
