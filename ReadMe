@@ -6,3 +6,20 @@ Pasta da matéria de Programação para Web (PRW), dos professores Murilo e Cass
     -> git config --global user.email "exemplo.email@gmail.com"
     -> git config --global user.name "UsernameExemplo"
 -> inicializar o xampp, junto ao apache, e para rodar o calculo (exe1.php), é só digitar no navegador http://localhost/PRW/Exemplo_PHP/exe1.php (exemplo 1 php).
+-> Toda vez que for necesário fazer uma conexão com o banco de dados, é preciso colocar os seguintes códigos:
+    <?php
+        //Informações do banco
+        $hostname = 'localhost';
+        $username = 'root';
+        $password = '';
+        $database = 'IFSP';
+        $port     = 3307;
+        //Conecta com o banco
+        $con = mysqli_connect($hostname, $username, $password, $database, $port);
+        //Verifica a conexão
+        if (mysqli_connect_error())
+        {
+            printf("Erro: conexão: %s", mysqli_connect_error());
+            exit();
+        }
+    ?>
