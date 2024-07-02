@@ -1,4 +1,5 @@
 <?php
+//Resolução do Exercício 1168 do Beecrowd
     $n = readline();
     for ($c=0; $c<$n;$c++)
     {
