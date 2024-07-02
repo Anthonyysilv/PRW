@@ -17,6 +17,7 @@
             line-height: 1.6;
             background-color: #f4f4f4;
             padding: 20px;
+            text-align: center; /* Centraliza todo o conteúdo na horizontal */
         }
 
         form {
@@ -26,6 +27,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px; /* Espaço abaixo do formulário */
+            text-align: left; /* Alinha o texto do formulário à esquerda */
         }
 
         fieldset {
@@ -73,6 +76,11 @@
             background-color: #0056b3;
         }
 
+        .btn-container {
+            text-align: center; /* Centraliza os botões dentro do container */
+            margin-top: 20px; /* Espaço acima dos botões */
+        }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -99,10 +107,33 @@
             <div>
                 <label for="estado">Estado</label>
                 <select name="estado" id="estado">
-                    <option value="SP">SP</option>
-                    <option value="RJ">RJ</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
                     <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
                     <option value="SE">SE</option>
+                    <option value="TO">TO</option>
                 </select>
             </div>
             <div>
@@ -110,7 +141,9 @@
             </div>
         </fieldset>
     </form>
-    <a href="ListarCidade.php" class="btn">Consultar Cadastros</a>
-    <a href="index.html" class="btn">Voltar à página inicial</a>
+    <div class="btn-container">
+        <a href="ListarCidade.php" class="btn">Consultar Cadastros</a>
+        <a href="index.html" class="btn">Voltar à página inicial</a>
+    </div>
 </body>
 </html>
