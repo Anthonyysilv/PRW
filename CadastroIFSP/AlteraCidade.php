@@ -171,6 +171,7 @@
                             <?php echo $row['estado'] == "TO" ? "selected" : "" ?>>TO</option>
                 </select>
             </div>
+            <input type="hidden" name="id" value="<?php echo $row['id']?>">
             <div>
                 <button type="submit">Alterar</button>
             </div>
