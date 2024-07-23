@@ -91,6 +91,7 @@
             mysqli_close($con);
         ?>
         <a href="index.html" class="btn">Voltar à página inicial</a>
+        <a href="CadastroCliente.html" class="btn">Cadastrar outro cliente</a>
     </div>
 </body>
 </html>

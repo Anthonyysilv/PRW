@@ -89,6 +89,7 @@
             mysqli_close($con);
         ?>
         <a href="index.html" class="btn">Voltar à página inicial</a>
+        <a href="CadastroCidade.html" class="btn">Cadastrar outra cidade</a>
     </div>
 </body>
 </html>
