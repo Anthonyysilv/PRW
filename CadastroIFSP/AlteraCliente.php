@@ -143,16 +143,16 @@
                     <input type="password" name="senha" id="senha" value="<?php echo $row['senha']?>" required>
                 </div>
                 <label for="ativo">Ativo</label>
-                <input type="radio" name="ativo" id="ativo" value="1" required> ativo
-                <input type="radio" name="ativo" id="ativo" value="0" checked required> não ativo
+                <input type="radio" name="ativo" id="ativo" value="1" required> Sim
+                <input type="radio" name="ativo" id="ativo" value="0" checked required> Não
                 <label for="cidade">Cidade</label>
                 <select name="cidade" id="cidade">
                     <?php
                         include('includes/conexao.php');
                         $sql = "SELECT * FROM cidade";
                         $result = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($result)) {
-                            echo "<option value='".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
+                        while($row_cid = mysqli_fetch_array($result)) {
+                            echo "<option value='".$row_cid['id']."'>".$row_cid['nome']."/".$row_cid['estado']."</option>";
                         }
                     ?>
                 </select>

@@ -83,7 +83,7 @@
                         email = '$email',
                         senha = '$senha',
                         ativo = '$ativo',
-                        cidade = '$id_cidade'
+                        cidade = '$cidade'
                     WHERE id = $id";
             $result  = mysqli_query($con, $sql);
             if ($result) {
