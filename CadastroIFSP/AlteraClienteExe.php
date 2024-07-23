@@ -2,7 +2,8 @@
     include('includes/conexao.php');
     $id = $_POST['id'];
     $nome = $_POST['nome'];
-    $estado = $_POST['estado'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
