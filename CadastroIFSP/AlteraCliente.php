@@ -142,6 +142,9 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" value="<?php echo $row['senha']?>" required>
                 </div>
+                <label for="ativo">Ativo</label>
+                <input type="radio" name="ativo" id="ativo" value="1" required> ativo
+                <input type="radio" name="ativo" id="ativo" value="0" checked required> não ativo
                 <label for="cidade">Cidade</label>
                 <select name="cidade" id="cidade">
                     <?php

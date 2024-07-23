@@ -83,8 +83,9 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Email</th>
-            <th>Senha</th>
+            <th>Ativo</th>
             <th>Cidade</th>
+            <th>Estado</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>

@@ -78,7 +78,7 @@
             echo "Cidade: $cidade<br>";
             $sql = "INSERT INTO cliente
                 (nome, email, senha, ativo, id_cidade)";
-            $sql = "VALUES('".$nome."','".$email."','".$senha."',".$ativo.",".$cidade.")";
+            $sql .= "VALUES('".$nome."','".$email."','".$senha."',".$ativo.",".$cidade.")";
             echo $sql;
 
             // Executa a query no banco de dados
