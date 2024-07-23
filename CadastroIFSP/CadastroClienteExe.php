@@ -68,15 +68,18 @@
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             $ativo = $_POST['ativo'];
+            $cidade = $_POST['cidade'];
 
             echo "<h1>Dados dos Clientes</h1>";
             echo "Nome: $nome<br>";
             echo "Email: $email<br>";
             echo "Senha: $senha<br>";
             echo "Situação: $ativo<br>";
-
-            // Monta a query SQL para inserir os dados na tabela
-            $sql = "INSERT INTO Cliente (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+            
+            $sql = "INSERT INTO cliente
+                (nome, email, senha, ativo, id_cidade)";
+            $sql = "VALUES('".$nome."','".$email."','".$senha."',".$ativo.",".$cidade.")";
+            echo $sql;
 
             // Executa a query no banco de dados
             $result = mysqli_query($con, $sql);
@@ -93,7 +96,7 @@
             mysqli_close($con);
         ?>
         <a href="index.html" class="btn">Voltar à página inicial</a>
-        <a href="CadastroCliente.html" class="btn">Cadastrar outro cliente</a>
+        <a href="CadastroCliente.php" class="btn">Cadastrar outro cliente</a>
     </div>
 </body>
 </html>

@@ -73,9 +73,9 @@
         //Executa a consulta
         $result = mysqli_query($con, $sql);
     ?>
-    <h1>Consulta de Cidades</h1>
+    <h1>Consulta de Clientes</h1>
     <div style="text-align: center; margin-bottom: 20px;">
-        <a href="CadastroCliente.html" class="btn">Cadastrar Cliente</a>
+        <a href="CadastroCliente.php" class="btn">Cadastrar Cliente</a>
         <a href="index.html" class="btn">Voltar à página inicial</a>
     </div>
     <table align="center" border="1">
@@ -96,7 +96,7 @@
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['email']."</td>";
                 echo "<td>".$row['senha']."</td>";
-                echo "<td>".$row['estado']."</td>";
+                echo "<td>".$row['cidade']."</td>";
                 echo "<td><a href='alteraCliente.php?id=".$row['id']."'>Alterar</a></td>";
                 echo "<td><a href='deletaCliente.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
