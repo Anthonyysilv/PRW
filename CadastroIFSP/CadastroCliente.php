@@ -117,15 +117,24 @@
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha" required>
             </div>
-            <div>
+            <div class="input-container">
                 <label for="ativo">Situação do Cliente</label>
                 <input type="radio" name="ativo" id="ativo" value="1" required> ativo
                 <input type="radio" name="ativo" id="ativo" value="0" checked required> não ativo
             </div>
-            <!---<div class="input-container">
-                <label for="cidade">Id Cidade</label>
-                <input type="number" name="id_cidade" id="cidade" required>
-            </div>-->
+            <div class="input-container">
+                <label for="cidade">Cidade</label>
+                <select name="cidade" id="cidade">
+                    <?php
+                        include('includes/conexao.php');
+                        $sql = "SELECT * FROM cidade";
+                        $result = mysqli_query($con, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            echo "<option value='".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
+                        }
+                    ?>
+                </select>
+            </div>
             <div class="button-container">
                 <button type="submit" class="btn">Cadastrar</button>
             </div>

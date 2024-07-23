@@ -142,10 +142,17 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" value="<?php echo $row['senha']?>" required>
                 </div>
-                <div style="width: 48%;">
-                    <label for="cidade">Id Cidade</label>
-                    <input type="number" name="id_cidade" id="cidade" value="<?php echo $row['id_cidade']?>" required>
-                </div>
+                <label for="cidade">Cidade</label>
+                <select name="cidade" id="cidade">
+                    <?php
+                        include('includes/conexao.php');
+                        $sql = "SELECT * FROM cidade";
+                        $result = mysqli_query($con, $sql);
+                        while($row = mysqli_fetch_array($result)) {
+                            echo "<option value='".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
+                        }
+                    ?>
+                </select>
             </div>
             <input type="hidden" name="id" value="<?php echo $row['id']?>">
             <div>

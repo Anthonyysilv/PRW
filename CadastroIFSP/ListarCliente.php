@@ -67,7 +67,8 @@
 <body>
     <?php
         include('includes/conexao.php');
-        $sql = "SELECT cli.id, cli.nome nomecliente, cli.email, cli.ativo, cid.nome, nomecidade, cid.estado * FROM Cliente cli 
+        $sql = "SELECT cli.id, cli.nome nomecliente, cli.email, cli.ativo, cid.nome, nomecidade, cid.estado 
+                    * FROM Cliente cli 
                     LEFT JOIN cidade cid on cid.id = cli.id_cidade";
         //Executa a consulta
         $result = mysqli_query($con, $sql);
@@ -83,6 +84,7 @@
             <th>Nome</th>
             <th>Email</th>
             <th>Senha</th>
+            <th>Cidade</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
@@ -94,6 +96,7 @@
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['email']."</td>";
                 echo "<td>".$row['senha']."</td>";
+                echo "<td>".$row['estado']."</td>";
                 echo "<td><a href='alteraCliente.php?id=".$row['id']."'>Alterar</a></td>";
                 echo "<td><a href='deletaCliente.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
