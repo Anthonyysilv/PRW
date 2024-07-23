@@ -75,7 +75,7 @@
             echo "Email: $email<br>";
             echo "Senha: $senha<br>";
             echo "Situação: $ativo<br>";
-            
+            echo "Cidade: $cidade<br>";
             $sql = "INSERT INTO cliente
                 (nome, email, senha, ativo, id_cidade)";
             $sql = "VALUES('".$nome."','".$email."','".$senha."',".$ativo.",".$cidade.")";
