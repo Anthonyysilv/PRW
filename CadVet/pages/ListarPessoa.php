@@ -9,14 +9,19 @@
 </head>
 <body>
 <?php
-        include('../includes/conexao.php');
-        $sql = "SELECT pessoa.id, pessoa.nome nomepessoa, pessoa.email, pessoa.endereco, pessoa.bairro, pessoa.cep, cid.nome nomecidade, cid.estado 
-                FROM Pessoa pessoa 
-                LEFT JOIN cidade cid on cid.id = cli.id_cidade";
-        //Executa a consulta
-        $result = mysqli_query($con, $sql);
-    ?>
-    <h1>Consulta de Clientes</h1>
+    include('../includes/conexao.php');
+
+    $sql = "SELECT pessoa.id, pessoa.nome nomepessoa, pessoa.email, pessoa.endereco, pessoa.bairro, pessoa.cep, cid.nome_cidade nomecidade, cid.estado 
+            FROM Pessoa pessoa 
+            LEFT JOIN cidade cid ON cid.id = pessoa.id_cidade";
+
+    $result = mysqli_query($con, $sql);
+
+    if (!$result) {
+        die("Erro na consulta: " . mysqli_error($con));
+    }
+?>
+    <h1>Consulta de Pessoas</h1>
     <div style="text-align: center; margin-bottom: 20px;">
         <a href="CadastroPessoa.php" class="btn">Cadastrar Pessoa</a>
         <a href="../index.html" class="btn">Voltar à página inicial</a>
@@ -34,20 +39,19 @@
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
-        <?php //mysqli_fetch_array lê uma linha opr vez
-            //Retorna todas as linhas da consulta
+        <?php
             while($row = mysqli_fetch_array($result)) {
                 echo "<tr>";
                 echo "<td>".$row['id']."</td>";
-                echo "<td>".$row['nomecliente']."</td>";
+                echo "<td>".$row['nomepessoa']."</td>";
                 echo "<td>".$row['email']."</td>";
                 echo "<td>".$row['endereco']."</td>";
                 echo "<td>".$row['bairro']."</td>";
                 echo "<td>".$row['cep']."</td>";
                 echo "<td>".$row['nomecidade']."</td>";
                 echo "<td>".$row['estado']."</td>";
-                echo "<td><a href='alteraCliente.php?id=".$row['id']."'>Alterar</a></td>";
-                echo "<td><a href='deletaCliente.php?id=".$row['id']."'>Deletar</a></td>";
+                echo "<td><a href='alteraPessoa.php?id=".$row['id']."'>Alterar</a></td>";
+                echo "<td><a href='deletaPessoa.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
             }
         ?>
