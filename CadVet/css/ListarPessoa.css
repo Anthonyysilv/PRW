@@ -1,0 +1,74 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf2f4; /* Azul claro para o fundo */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    color: #4a90e2; /* Azul para o título */
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4a90e2; /* Azul para os botões */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #357abd; /* Azul escuro no hover */
+}
+
+/* Tabela */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff; /* Fundo branco para a tabela */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Cor das bordas das células */
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2; /* Azul para o cabeçalho da tabela */
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternância de cores para linhas da tabela */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo para linha ao passar o mouse */
+}
+
+td a {
+    color: #4a90e2; /* Azul para links na tabela */
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline; /* Sublinhado no hover dos links */
+}
