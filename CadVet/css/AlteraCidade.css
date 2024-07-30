@@ -1,0 +1,77 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* Cinza muito claro para o fundo */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para o formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+legend {
+    font-size: 1.5em;
+    color: #4a90e2; /* Azul claro para o título do formulário */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4a4a4a; /* Cor do texto do rótulo */
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4a90e2; /* Azul para o botão */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357abd; /* Azul escuro no hover */
+}
+
+/* Botões de navegação */
+.btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4a90e2; /* Azul para os botões */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #357abd; /* Azul escuro no hover */
+}
