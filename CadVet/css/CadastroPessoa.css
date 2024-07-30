@@ -1,0 +1,103 @@
+/* Reset básico */
+body, h2, form, div, input, select, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f9; /* Fundo claro e neutro */
+    color: #333; /* Texto escuro para contraste */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilização do título */
+h2 {
+    color: #4caf50; /* Verde suave e amigável */
+    margin-bottom: 20px;
+}
+
+/* Estilização do formulário */
+form {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilização dos grupos de formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4caf50; /* Cor verde consistente com o título */
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #4caf50; /* Cor da borda ao focar */
+}
+
+/* Estilização dos botões */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container .btn {
+    background-color: #4caf50; /* Verde para o botão */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .btn:hover {
+    background-color: #45a049; /* Verde escuro ao passar o mouse */
+}
+
+/* Estilização dos links dos botões secundários */
+.btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-container .btn-secondary {
+    background-color: #607d8b; /* Azul acinzentado para links secundários */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-container .btn-secondary:hover {
+    background-color: #455a64; /* Azul escuro ao passar o mouse */
+}
