@@ -4,29 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Cliente</title>
-    <link rel="stylesheet" href="../css/CadastroPessoaExe.css">
+    <title>Cadastro Cidade</title>
+    <link rel="stylesheet" href="../css/CadastroCidadeExe.css">
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <?php
             include('../includes/conexao.php');
             $nome = $_POST['nome'];
-            $email = $_POST['email'];
-            $senha = $_POST['senha'];
-            $ativo = $_POST['ativo'];
-            $cidade = $_POST['cidade'];
+            $estado = $_POST['estado'];
 
-            echo "<h1>Dados dos Clientes</h1>";
+            echo "<h1>Dados da Cidade</h1>";
             echo "Nome: $nome<br>";
-            echo "Email: $email<br>";
-            echo "Senha: $senha<br>";
-            echo "Situação: $ativo<br>";
-            echo "Cidade: $cidade<br>";
-            $sql = "INSERT INTO cliente
-                (nome, email, senha, ativo, id_cidade)";
-            $sql .= "VALUES('".$nome."','".$email."','".$senha."',".$ativo.",".$cidade.")";
-            echo $sql;
+            echo "Estado: $estado<br>";
+
+            // Monta a query SQL para inserir os dados na tabela
+            $sql = "INSERT INTO Cidade (nome_cidade, estado) VALUES ('$nome', '$estado')";
 
             // Executa a query no banco de dados
             $result = mysqli_query($con, $sql);
@@ -43,7 +36,7 @@
             mysqli_close($con);
         ?>
         <a href="index.html" class="btn">Voltar à página inicial</a>
-        <a href="CadastroCliente.php" class="btn">Cadastrar outro cliente</a>
+        <a href="CadastroCidade.html" class="btn">Cadastrar outra cidade</a>
     </div>
 </body>
 </html>

@@ -34,11 +34,11 @@
             <label for="cidade">Cidade</label>
             <select name="cidade" id="cidade">
                 <?php
-                    include('includes/conexao.php');
+                    include('../includes/conexao.php');
                     $sql = "SELECT * FROM cidade";
                     $result = mysqli_query($con, $sql);
                     while($row = mysqli_fetch_array($result)) {
-                        echo "<option value='".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
+                        echo "<option value='".$row['id']."'>".$row['nome_cidade']."/".$row['estado']."</option>";
                     }
                 ?>
             </select>
