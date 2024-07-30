@@ -49,7 +49,7 @@
     </form>
     <div class="btn-container">
             <a href="ListarPessoa.php" class="btn btn-secondary">Consultar Pessoas</a>
-            <a href="index.html" class="btn btn-secondary">Voltar à página inicial</a>
+            <a href="../index.html" class="btn btn-secondary">Voltar à página inicial</a>
     </div>
 </body>
 </html>

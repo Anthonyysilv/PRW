@@ -13,19 +13,21 @@
             include('../includes/conexao.php');
             $nome = $_POST['nome'];
             $email = $_POST['email'];
-            $senha = $_POST['senha'];
-            $ativo = $_POST['ativo'];
+            $endereco = $_POST['endereco'];
+            $bairro = $_POST['bairro'];
+            $cep = $_POST['cep'];
             $cidade = $_POST['cidade'];
 
-            echo "<h1>Dados dos Clientes</h1>";
+            echo "<h1>Dados das Pessoas</h1>";
             echo "Nome: $nome<br>";
             echo "Email: $email<br>";
-            echo "Senha: $senha<br>";
-            echo "Situação: $ativo<br>";
+            echo "Endereço: $endereco<br>";
+            echo "Bairro: $bairro<br>";
+            echo "Cep: $cep<br>";
             echo "Cidade: $cidade<br>";
-            $sql = "INSERT INTO cliente
-                (nome, email, senha, ativo, id_cidade)";
-            $sql .= "VALUES('".$nome."','".$email."','".$senha."',".$ativo.",".$cidade.")";
+            $sql = "INSERT INTO pessoa
+                (nome, email, endereco, bairro, id_cidade, cep)";
+            $sql .= "VALUES('".$nome."','".$email."','".$endereco."','".$bairro."',".$cidade.",'".$cep."')";
             echo $sql;
 
             // Executa a query no banco de dados
@@ -42,8 +44,8 @@
             // Fecha a conexão com o banco de dados
             mysqli_close($con);
         ?>
-        <a href="index.html" class="btn">Voltar à página inicial</a>
-        <a href="CadastroCliente.php" class="btn">Cadastrar outro cliente</a>
+        <a href="../index.html" class="btn">Voltar à página inicial</a>
+        <a href="CadastroPessoa.php" class="btn">Cadastrar outra Pessoa</a>
     </div>
 </body>
 </html>
