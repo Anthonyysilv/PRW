@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Fluxo do Caixa</title>
-    <link rel="stylesheet" href="../css/ListarPessoa.css">
+    <link rel="stylesheet" href="../css/listar.css">
 </head>
 <body>
 <?php
