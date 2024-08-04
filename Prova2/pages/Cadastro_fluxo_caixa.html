@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Fluxo de Caixa</title>
+    <title>Cadastro Fluxo de Caixa</title>
     <link rel="stylesheet" href="../css/Cadastro_fluxo_caixa.css">
 </head>
+
 <body>
-    <form action="Cadastro_fluxo_caixa.php" method="post">
-        <fieldset>
-            <legend>Cadastro de Fluxo de Caixa</legend>
-            <div class="form-group">
-                <label for="data">Data:</label>
-                <input type="date" nome="data" id="data">
-            </div>
-            <div class="form-group">
-                <label for="tipo">Tipo:</label>
-                <input type="radio" name="tipo" id="tipo" value="1" required> Entrada
-                <input type="radio" name="tipo" id="tipo" value="0" checked required> Saída
-            </div>
-            
-            <div class="form-group">
-                <label for="valor">Valor:</label>
-                <input type="text" inputmode="decimal" 
-                    id="valor" name="valor" 
-                    pattern="[0-9]*[.,]?[0-9]*"> 
-            </div>
-            <div class="form-group">
-                <label for="historico">Histórico:</label>
-                <input type="text" name="historico" id="historico">
-            </div>
-            <div class="form-group">
-                <label for="cheque">Cheque:</label>
-                <select name="cheque" id="cheque">
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                </select>
-            </div>
-            <div class="button-container">
-                <button type="submit" class="btn">Enviar</button>
-                <button><a href="../index.html">Voltar</a></button>
-            </div>
-        </fieldset>
-    </form>
+        <div>
+            <h1>
+                Cadastro Fluxo de Caixa.
+            </h1>
+            <form action="Cadastro_fluxo_caixa.php" method="post">
+                <div class="form-group">
+                    <label for="data">Data: </label>
+                    <input type="date" name="data" id="data" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo: </label>
+                    <input type="radio" name="tipo" value="entrada" required> Entrada
+                    <input type="radio" name="tipo" value="saida" required checked> Saída
+                </div>
+
+
+                <div class="form-group">
+                    <label for="valor">Valor: </label>
+                    <input type="number" stap name="valor" id="valor" required maxlength="13" class="form-control" step=".01">
+                </div>
+                <div class="form-group">
+                    <label for="historico">Histórico: </label>
+                    <input type="text" name="historico" id="historico" required maxlength="150" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="cheque">Cheque: </label>
+                    <select class="form-control" name="cheque">
+                        <option value="nao">Não</option>
+                        <option value="sim">Sim</option>
+                    </select>
+                </div>
+                <input type="submit" value="Enviar" class="buttom">
+                <button><a href="Index.php">Voltar</a></button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

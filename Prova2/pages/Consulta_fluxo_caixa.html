@@ -7,20 +7,24 @@
     <title>Consulta de Fluxo de Caixa</title>
 </head>
 <body>
+    <h1>
+        Consulta de Fluxo de Caixa 
+    </h1>
     <form action="Consulta_fluxo_caixa.php" method="post">
-        <fieldset>
-            <legend>Consulta de Fluxo de Caixa</legend>
-            <div class="form-group">
-                <label for="tipo">Tipo de Consulta:</label>
-                <input type="radio" name="tipo" id="tipo" value="0" required> Saldo Total
-                <input type="radio" name="tipo" id="tipo" value="1" required> Total Saídas
-                <input type="radio" name="tipo" id="tipo" value="2" required> Total Entradas
-            </div>
-            <div class="button-container">
-                <button type="submit" class="btn">Enviar</button>
-                <button><a href="../index.html">Voltar</a></button>
-            </div>
-        </fieldset>
+    <div>
+        <label for="tipo">Tipo de consulta: </label>
+        <br>
+        <input type="radio" name="tipo" required value="saldo">
+        <label for="tipo">Saldo Total</label><br>
+        <input type="radio" name="tipo" required value="saida">
+        <label for="tipo">Total Saídas</label><br>
+        <input type="radio" name="tipo" required value="entrada">
+        <label for="tipo">Total Entradas</label><br>
+        <br>
+        <input type="submit" value="Enviar" class="buttom">
+        <button><a href="../index.html">Voltar</a></button>
+    </div>
     </form>
+    <br>
 </body>
 </html>
