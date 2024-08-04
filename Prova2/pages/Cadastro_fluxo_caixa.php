@@ -11,7 +11,7 @@
 <div class="container">
         <?php
             include('../includes/conexao.php');
-            $data = $_POST['data'] ?? "";
+            $data = $_POST['data'] ?? '';
             $tipo = $_POST['tipo'];
             $valor = $_POST['valor'];
             $historico = $_POST['historico'];
@@ -26,7 +26,7 @@
 
             $sql = "INSERT INTO fluxo_caixa
                 (data, tipo, valor, historico, cheque)";
-            $sql .= "VALUES('".$data."',".$tipo.",'".$valor."','".$historico."','".$cheque."')";
+            $sql .= "VALUES('".$data."','".$tipo."','".$valor."','".$historico."','".$cheque."')";
             //echo $sql;
 
             // Executa a query no banco de dados
