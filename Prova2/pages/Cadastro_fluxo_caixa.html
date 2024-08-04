@@ -20,9 +20,12 @@
                 <input type="radio" name="tipo" id="tipo" value="1" required> Entrada
                 <input type="radio" name="tipo" id="tipo" value="0" checked required> Saída
             </div>
+            
             <div class="form-group">
                 <label for="valor">Valor:</label>
-                <input type="number" nome="valor" id="valor">
+                <input type="text" inputmode="decimal" 
+                    id="valor" name="valor" 
+                    pattern="[0-9]*[.,]?[0-9]*"> 
             </div>
             <div class="form-group">
                 <label for="historico">Histórico:</label>
