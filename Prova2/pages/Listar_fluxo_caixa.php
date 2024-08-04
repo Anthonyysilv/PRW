@@ -45,7 +45,7 @@
                 echo "<td>".$row['historico']."</td>";
                 echo "<td>".$row['cheque']."</td>";
                 echo "<td><a href='Altera_fluxo_caixa.php?id=".$row['id']."'>Alterar</a></td>";
-                echo "<td><a href='deletaAnimal.php?id=".$row['id']."'>Deletar</a></td>";
+                echo "<td><a href='Deleta_fluxo_caixa.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
             }
         ?>
