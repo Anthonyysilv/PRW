@@ -11,13 +11,13 @@
         <?php
             include('../includes/conexao.php');
             $tipo = $_POST['tipo'];
-            if ($tipo == '1') {
-                $sql = "SELECT sum(valor) valor FROM fluxo_caixa WHERE tipo = '1'";
-            } else if ($tipo == '0') {
-                $sql="SELECT sum(valor) valor FROM fluxo_caixa WHERE tipo = '0'";
+            if ($tipo == 'entrada') {
+                $sql = "SELECT sum(valor) valor FROM fluxo_caixa WHERE tipo = 'entrada'";
+            } else if ($tipo == 'saida') {
+                $sql="SELECT sum(valor) valor FROM fluxo_caixa WHERE tipo = 'saida'";
             } else if ($tipo == 'saldo') {
-                $sql="SELECT sum(case when tipo = '1' then valor else 0 end) -
-                sum(case when tipo = '0' then valor else 0 end) as valor FROM fluxo_caixa";
+                $sql="SELECT sum(case when tipo = 'entrada' then valor else 0 end) -
+                sum(case when tipo = 'saida' then valor else 0 end) as valor FROM fluxo_caixa";
             }
         ?>
         <a href="../index.html" class="btn">Voltar à página inicial</a>

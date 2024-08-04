@@ -32,7 +32,7 @@
                         tipo = '$tipo',
                         valor = '$valor',
                         historico = '$historico',
-                        cheque = '$cheque',
+                        cheque = '$cheque'
                 WHERE id = $id";
 
             
