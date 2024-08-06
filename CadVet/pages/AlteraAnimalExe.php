@@ -42,8 +42,10 @@
                         raca = '$raca',
                         data_nascimento = '$data_nascimento',
                         idade = '$idade',
+                        castrado = '$castrado',
                         id_pessoa = '$pessoa'
                     WHERE id = $id";
+                    echo $sql;
             $result  = mysqli_query($con, $sql);
             if ($result) {
                 echo '<div class="message success">Dados atualizados com sucesso!</div>';
