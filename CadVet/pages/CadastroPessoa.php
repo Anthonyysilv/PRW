@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
             <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" required>
+            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="12345-678" required>
         </div>
         <div class="form-group">
             <label for="cidade">Cidade</label>
