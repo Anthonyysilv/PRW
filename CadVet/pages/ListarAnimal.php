@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Pessoas</title>
+    <title>Listar Animais</title>
     <link rel="stylesheet" href="../css/ListarPessoa.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
         die("Erro na consulta: " . mysqli_error($con));
     }
 ?>
-    <h1>Consulta de Pessoas</h1>
+    <h1>Consulta de Animais</h1>
     <div style="text-align: center; margin-bottom: 20px;">
         <a href="CadastroAnimal.php" class="btn">Cadastrar Animal</a>
         <a href="../index.html" class="btn">Voltar à página inicial</a>
@@ -51,8 +51,8 @@
                 echo "<td>".$row['idade']."</td>";
                 echo "<td>".$castrado."</td>";
                 echo "<td>".$row['nomepessoa']."</td>";
-                echo "<td><a href='alteraPessoa.php?id=".$row['id']."'>Alterar</a></td>";
-                echo "<td><a href='deletaPessoa.php?id=".$row['id']."'>Deletar</a></td>";
+                echo "<td><a href='AlteraAnimal.php?id=".$row['id']."'>Alterar</a></td>";
+                echo "<td><a href='deletaAnimal.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
             }
         ?>

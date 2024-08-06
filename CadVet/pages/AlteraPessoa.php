@@ -15,7 +15,7 @@
         $result = mysqli_query($con,$sql);
         $row = mysqli_fetch_array($result);
     ?>
-    <form action="AlterarPessoaExe.php" method="post">
+    <form action="AlteraPessoaExe.php" method="post">
         <fieldset>
             <legend>Alterar Pessoa</legend>
             <div>
