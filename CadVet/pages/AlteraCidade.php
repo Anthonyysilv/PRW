@@ -20,7 +20,7 @@
             <legend>Alterar Cidade</legend>
             <div>
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($row['nome_cidade']); ?>">
+                <input type="text" name="nome" id="nome" value="<?php echo $row['nome_cidade']?>">
             </div>
             <div>
             <select name="estado" id="estado">

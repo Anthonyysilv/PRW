@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cinza claro de fundo */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    background-color: #fff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+    margin: 20px auto;
+}
+h1 {
+    color: #333; /* Cor do título */
+    border-bottom: 2px solid #333; /* Linha divisória */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 10px;
+}
+.message {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.success {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+.error {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+.btn {
+    background-color: #2196F3; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: #0b7dda; /* Azul mais escuro ao passar o mouse */
+}

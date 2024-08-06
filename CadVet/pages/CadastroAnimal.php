@@ -50,7 +50,7 @@
         </div>
     </form>
     <div class="btn-container">
-        <a href="ListarAnimais.php" class="btn btn-secondary">Consultar Animais</a>
+        <a href="ListarAnimal.php" class="btn btn-secondary">Consultar Animais</a>
         <a href="../index.html" class="btn btn-secondary">Voltar à página inicial</a>
     </div>
 </body>
