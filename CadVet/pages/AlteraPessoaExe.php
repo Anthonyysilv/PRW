@@ -31,7 +31,7 @@
                         endereco = '$endereco',
                         bairro = '$bairro',
                         cep = '$cep',
-                        cidade = '$cidade'
+                        id_cidade = '$cidade'
                     WHERE id = $id";
             $result  = mysqli_query($con, $sql);
             if ($result) {

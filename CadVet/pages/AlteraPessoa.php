@@ -51,7 +51,7 @@
                     ?>
                 </select>
             </div>
-            <input type="hidden" name="id" value="<?php echo $row['id']?>">
+            <input type="hidden" name="id" value="<?php echo $id?>">
             <div>
                 <button type="submit">Alterar</button>
             </div>
