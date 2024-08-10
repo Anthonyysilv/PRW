@@ -28,7 +28,7 @@
             $sql = "INSERT INTO pessoa
                 (nome, email, endereco, bairro, id_cidade, cep)";
             $sql .= "VALUES('".$nome."','".$email."','".$endereco."','".$bairro."',".$cidade.",'".$cep."')";
-            echo $sql;
+            //echo $sql;
 
             // Executa a query no banco de dados
             $result = mysqli_query($con, $sql);

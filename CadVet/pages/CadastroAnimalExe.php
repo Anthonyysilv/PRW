@@ -39,7 +39,7 @@
             $sql = "INSERT INTO Animal
                 (nome, especie, raca, data_nascimento, idade, castrado, id_pessoa)";
             $sql .= "VALUES('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."',".$castrado.",".$pessoa.")";
-            echo $sql;
+            //echo $sql;
 
             // Executa a query no banco de dados
             $result = mysqli_query($con, $sql);
