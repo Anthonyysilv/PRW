@@ -13,7 +13,7 @@ Pasta da matéria de Programação para Web (PRW), dos professores Murilo e Cass
         $username = 'root';
         $password = '';
         $database = 'IFSP';
-        $port     = 3307;
+        $port     = 3307; //ou 3306
         //Conecta com o banco
         $con = mysqli_connect($hostname, $username, $password, $database, $port);
         //Verifica a conexão
@@ -24,4 +24,4 @@ Pasta da matéria de Programação para Web (PRW), dos professores Murilo e Cass
         }
     ?>
 -> Projeto CadastroIFSP finalizado no dia 23/07/2024.
--> Projeto CadVet em processo.
+-> Projeto CadVet finalizado no dia 06/08/2024.
