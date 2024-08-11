@@ -22,6 +22,7 @@
                 <div class="field input">
                     <label for="">Password</label>
                     <input type="password" name="password" placeholder="Enter New Password" required>
+                    <i class="fas fa-eye"></i>
                 </div>
                 <div class="field image">
                     <!--IMPORTANTE-->
@@ -33,8 +34,10 @@
                     <input type="submit" name="submit" value="Continue to Chat">
                 </div>
             </form>
-            <div class="link">Already signed up? <a href="pages/login.php">Login now</a></div>
+            <div class="link">Already signed up? <a href="login.php"> Login now</a></div>
         </section>
     </div>
+    <script type="text/javascript" src="js/pass-show-hide.js"></script>
+    <script type="tetx/javascript" src="js/signup.js"></script>
 </body>
 </html>
