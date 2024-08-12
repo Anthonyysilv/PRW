@@ -6,6 +6,8 @@
 -- Generation Time: Feb 18, 2021 at 11:44 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.26
+CREATE DATABASE IF NOT EXISTS chatapp;
+USE chatapp;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
