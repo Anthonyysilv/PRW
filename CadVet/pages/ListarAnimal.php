@@ -45,6 +45,7 @@
                 $castrado = $row['castrado'] == 1 ? "Sim":"Não";
                 echo "<tr>";
                 echo "<td>".$row['id']."</td>";
+                //Verifica se tem ou não foto
                 if($row['foto'] == "") {
                     echo "<td></td>";
                 } else {
