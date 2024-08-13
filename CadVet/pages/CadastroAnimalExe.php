@@ -13,12 +13,11 @@
             include('../includes/conexao.php');
             //Upload foto
             $nome_foto = "";
-            //$_FILES verifica que a foto foi selecionada, igual o $_POST
-            if(file_exists($_FILES['foto']['name'])) {
+            if(file_exists($_FILES['foto']['tmp_name'])) { //$_FILES verifica que a foto foi selecionada, igual o $_POST
                 $pasta_destino = '../img/';
-                $extensao = strtolower($_FILES['foto']['name'],-4); //-4 para pegar os últimos quatro digitos no nome do arquivo
+                $extensao = strtolower(substr($_FILES['foto']['name'],-4)); //-4 para pegar os últimos quatro digitos no nome do arquivo
                 $nome_foto = $pasta_destino . date('Ymd-His'); //ano, mes e dia - hora, minuto e segundos
-                move_uploaded_file($_FILES['foto']['name'],$nome_foto);
+                move_uploaded_file($_FILES['foto']['tmp_name'],$nome_foto);
             }
             //Fim do upload da foto
             // Recebe a data de nascimento do formulário
@@ -47,8 +46,8 @@
                 $idade = null; // Pode definir como NULL ou deixar em branco
             }
             $sql = "INSERT INTO Animal
-                (nome, especie, raca, data_nascimento, idade, castrado, id_pessoa)";
-            $sql .= "VALUES('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."',".$castrado.",".$pessoa.")";
+                (nome, especie, raca, data_nascimento, idade, castrado, id_pessoa, foto)";
+            $sql .= "VALUES('".$nome."','".$especie."','".$raca."','".$data_nascimento."','".$idade."',".$castrado.",".$pessoa.",'".$nome_foto."')";
             //echo $sql;
 
             // Executa a query no banco de dados
