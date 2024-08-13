@@ -11,6 +11,10 @@
     <h2>Cadastrar Pet</h2>
     <form action="CadastroAnimalExe.php" method="post" enctype="multipart/form-data"> <!--Enctype diz o tipo de arquivo que pode ser aceito pelo form-->
         <div class="form-group">
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto" accept="image/*">
+        </div>
+        <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" required value="<?php echo isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : ''; ?>">
         </div>
