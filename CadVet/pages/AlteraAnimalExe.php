@@ -1,5 +1,14 @@
 <?php
     include('../includes/conexao.php');
+
+    $nome_foto = "";
+    if(file_exists($_FILES['foto']['tmp_name'])) { //$_FILES verifica que a foto foi selecionada, igual o $_POST
+        $pasta_destino = '../img/';
+        $extensao = strtolower(substr($_FILES['foto']['name'],-4)); //-4 para pegar os últimos quatro digitos no nome do arquivo
+        $nome_foto = $pasta_destino . date('Ymd-His'); //ano, mes e dia - hora, minuto e segundos
+        move_uploaded_file($_FILES['foto']['tmp_name'],$nome_foto);
+    }
+    //Fim do upload da foto
     $id = $_POST['id'];
     $nome = $_POST['nome'];
     $especie = $_POST['especie'];
@@ -36,7 +45,19 @@
             } else {
                 $idade = null; // Pode definir como NULL ou deixar em branco
             }
-            $sql = "UPDATE animal SET 
+            if ($nome_foto == ""){
+                $sql = "UPDATE animal SET 
+                    nome = '$nome',
+                    especie = '$especie',
+                    raca = '$raca',
+                    data_nascimento = '$data_nascimento',
+                    idade = '$idade',
+                    castrado = '$castrado',
+                    id_pessoa = '$pessoa'
+                WHERE id = $id";
+            }else {
+                $sql = "UPDATE animal SET 
+                        foto = '$nome_foto',
                         nome = '$nome',
                         especie = '$especie',
                         raca = '$raca',
@@ -45,7 +66,9 @@
                         castrado = '$castrado',
                         id_pessoa = '$pessoa'
                     WHERE id = $id";
-                    echo $sql;
+            }
+
+            
             $result  = mysqli_query($con, $sql);
             if ($result) {
                 echo '<div class="message success">Dados atualizados com sucesso!</div>';

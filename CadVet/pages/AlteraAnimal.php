@@ -15,9 +15,19 @@
         $result = mysqli_query($con,$sql);
         $row = mysqli_fetch_array($result);
     ?>
-    <form action="AlteraAnimalExe.php" method="post">
+    <form action="AlteraAnimalExe.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Alterar Animal</legend>
+            <div>
+                <?php
+                    if($row['foto'] != "")
+                    {
+                        echo "<img src='".$row['foto']."' width='80' height='100'/><br>";
+                    }
+                ?>
+                <label for="foto">Foto</label>
+                <input type="file" name="foto" id="foto" accept="image/*">
+            </div>
             <div>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<?php echo $row['nome']?>" required>
