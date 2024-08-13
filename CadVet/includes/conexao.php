@@ -4,7 +4,7 @@
     $username = 'root';
     $password = '';
     $database = 'CadVet';
-    $port     = 3306; //Alterar para 3307 no IF
+    $port     = 3307; //Alterar para 3307 no IF
     //Conecta com o banco
     $con = mysqli_connect($hostname, $username, $password, $database, $port);
     //Verifica a conexão
