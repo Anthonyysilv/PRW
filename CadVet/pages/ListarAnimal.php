@@ -11,7 +11,7 @@
 <?php
     include('../includes/conexao.php');
 
-    $sql = "SELECT animal.id, animal.nome nomeanimal, animal.especie, animal.raca, animal.data_nascimento, animal.idade, animal.castrado, pes.nome nomepessoa 
+    $sql = "SELECT animal.id, animal.nome nomeanimal, animal.especie, animal.raca, animal.data_nascimento, animal.idade, animal.castrado, pes.nome nomepessoa, foto 
             FROM Animal animal 
             LEFT JOIN pessoa pes ON pes.id = animal.id_pessoa";
 
@@ -29,6 +29,7 @@
     <table align="center" border="1">
         <tr>
             <th>Código</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>Espécie</th>
             <th>Raça</th>
@@ -44,6 +45,11 @@
                 $castrado = $row['castrado'] == 1 ? "Sim":"Não";
                 echo "<tr>";
                 echo "<td>".$row['id']."</td>";
+                if($row['foto'] == "") {
+                    echo "<td></td>";
+                } else {
+                    echo "<td><img src='".$row['foto']."' width='80' height='100'/></td>";
+                }
                 echo "<td>".$row['nomeanimal']."</td>";
                 echo "<td>".$row['especie']."</td>";
                 echo "<td>".$row['raca']."</td>";
