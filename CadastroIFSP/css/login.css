@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9); /* Gradiente de azul para o fundo */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* Cor do texto branco */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para o título */
+}
+
+form {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd; /* Borda mais fina para o formulário */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Borda inferior fina */
+    outline: none; /* Remove a borda padrão ao focar */
+    background-color: #f9f9f9; /* Fundo branco */
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-bottom: 2px solid #3498db; /* Borda inferior mais espessa ao focar */
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); /* Sombra ao focar */
+}
+
+form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3498db; /* Azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #2980b9; /* Azul mais escuro ao passar o mouse */
+}
