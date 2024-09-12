@@ -71,3 +71,19 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #2980b9; /* Azul mais escuro ao passar o mouse */
 }
+.back-button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #666; /* Cor de fundo mais escura */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+  
+.back-button:hover {
+    background-color: #555; /* Cor de fundo mais escura ao passar o mouse */
+}
