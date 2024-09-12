@@ -45,8 +45,7 @@
         ?>
     </nav>
     <div class="container">
-        <h1>Bem-vindo à Página Inicial</h1>
-        <h2>O que deseja fazer?</h2>
+        <h1>Bem-vindo à nossa Plataforma de Gestão de Clientes e Cidades!</h1> 
     </div>
 </body>
 </html>
