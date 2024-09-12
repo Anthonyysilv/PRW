@@ -19,7 +19,7 @@
     <h1>Consulta de Clientes</h1>
     <div style="text-align: center; margin-bottom: 20px;">
         <a href="CadastroCliente.php" class="btn">Cadastrar Cliente</a>
-        <a href="index.html" class="btn">Voltar à página inicial</a>
+        <a href="index.php" class="btn">Voltar à página inicial</a>
     </div>
     <table align="center" border="1">
         <tr>
