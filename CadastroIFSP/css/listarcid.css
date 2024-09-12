@@ -1,0 +1,72 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Cor de fundo da página */
+  }
+  
+  h1 {
+    font-weight: bold;
+    color: #337ab7; /* Cor do título */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #337ab7;
+    color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Link Styles */
+  a {
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  a:hover {
+    color: #337ab7; /* Change the link color on hover */
+  }
