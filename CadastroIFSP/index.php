@@ -14,16 +14,39 @@
     ?>
 </head>
 <body>
+    <nav class="nav-bar">
+        <?php
+            include('includes/inicia_sessao.php');
+            if(!empty($_SESSION['login'])) {
+        ?>
+        <ul>
+            <li><a href="#" class="nav-btn">Cadastro</a>
+                <ul>
+                    <li><a href="CadastroCidade.html">Cidade</a></li>
+                    <li><a href="CadastroCliente.php">Cliente</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="nav-btn">Consultar</a>
+                <ul>
+                    <li><a href="ListarCidade.php">Cidades</a></li>
+                    <li><a href="ListarCliente.php">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="Login.html" class="nav-btn">Logar</a></li>
+            <li><a href="Logout.php" class="back-button">Logout</a></li>
+            <li class="user-name">
+                <a>Olá, <?php echo $_SESSION['login']['nome']; ?></a>
+            </li>
+        </ul>
+        <?php
+            } else {
+                header("Location: Login.html");
+            }
+        ?>
+    </nav>
     <div class="container">
         <h1>Bem-vindo à Página Inicial</h1>
         <h2>O que deseja fazer?</h2>
-        <div class="button-container">
-            <a href="CadastroCidade.html" class="btn">Cadastrar Cidade</a>
-            <a href="ListarCidade.php" class="btn">Consultar Cidades</a>
-            <a href="CadastroCliente.php" class="btn">Cadastrar Cliente</a>
-            <a href="ListarCliente.php" class="btn">Consultar Clientes</a>
-            <a href="Login.html" class="btn">Logar</a>
-        </div>
     </div>
 </body>
 </html>
