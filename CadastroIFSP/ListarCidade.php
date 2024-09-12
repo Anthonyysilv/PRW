@@ -74,7 +74,7 @@
     <h1>Consulta de Cidades</h1>
     <div style="text-align: center; margin-bottom: 20px;">
         <a href="CadastroCidade.html" class="btn">Cadastrar Nova Cidade</a>
-        <a href="index.html" class="btn">Voltar à página inicial</a>
+        <a href="index.php" class="btn">Voltar à página inicial</a>
     </div>
     <table align="center" border="1">
         <tr>
