@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #000; /* Borda mais espessa para simular um documento */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff; /* Azul */
+}
+
+.input-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000; /* Cor do texto */
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="password"],
+.input-container input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #000; /* Borda inferior fina */
+    outline: none; /* Remove a borda padrão ao focar */
+    background-color: transparent; /* Fundo transparente */
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="password"]:focus,
+.input-container input[type="number"]:focus {
+    border-bottom: 2px solid #007bff; /* Borda inferior mais espessa ao focar */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px; /* Espaçamento entre os botões */
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+.btn-secondary {
+    background-color: #dc3545; /* Vermelho */
+}
+
+.btn-secondary:hover {
+    background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.input-container label[for="ativo"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.input-container input[type="radio"] {
+    margin-right: 5px;
+}
+
+.input-container select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #000; /* Borda inferior fina */
+    outline: none; /* Remove a borda padrão ao focar */
+    background-color: transparent; /* Fundo transparente */
+}
+
+.input-container select:focus {
+    border-bottom: 2px solid #007bff; /* Borda inferior mais espessa ao focar */
+}
