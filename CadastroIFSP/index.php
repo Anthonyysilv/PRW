@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/styleIndex.css">
+    <?php
+        include('includes/inicia_sessao.php');
+        if(empty($_SESSION['login'])) {
+            header("Location: Login.html");
+        }
+    ?>
 </head>
 <body>
     <div class="container">

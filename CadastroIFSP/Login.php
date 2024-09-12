@@ -11,7 +11,7 @@
         if($row['senha'] == $senha) {
             include('includes/inicia_sessao.php');
             $_SESSION['login'] = $row;
-            header('Location: index.html'); // volta para a página inicial
+            header('Location: index.php'); // volta para a página inicial
         } else {
             echo "<h1>Senha inválida seu burro! Sua senha é ".$row['senha']."</h1>";
         }
