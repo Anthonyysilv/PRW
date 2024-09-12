@@ -34,6 +34,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #444; /* Add a bottom border to the nav bar */
+  position: relative; /* Add this to position the user name absolutely */
 }
 
 .nav-bar ul {
@@ -97,18 +98,6 @@ h2 {
   background-color: #555; /* Cor de fundo do botão Voltar ao passar o mouse */
 }
 
-.user-name {
-  margin-left: auto; /* Move the user name to the right side of the nav bar */
-  font-size: 16px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.user-name a {
-  color: #fff; /* Keep the text color white */
-  text-decoration: none;
-}
-
 /* Container Styles */
 .container {
   max-width: 800px;
@@ -139,4 +128,20 @@ a:hover {
 .nav-bar li ul a:hover {
   background-color: #f0f0f0; /* Change the background color on hover */
   color: #337ab7; /* Change the link color on hover */
+}
+
+.user-name {
+  position: absolute; /* Add this to position the user name absolutely */
+  top: 10px; /* Adjust the top position to your liking */
+  right: 10px; /* Adjust the right position to your liking */
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-name a {
+  color: #fff; /* Keep the text color white */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
