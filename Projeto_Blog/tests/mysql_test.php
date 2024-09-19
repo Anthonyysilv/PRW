@@ -19,7 +19,7 @@
     function buscar_teste() : void
     {
         $usuarios = buscar('usuario', ['id', 'nome', 'email'], [], '');
-        print_r($usuarios);
+        print_r($usuarios); //diz erro '='
     }
     //Teste update banco de dados
     function update_teste($id, $nome, $email) : void
