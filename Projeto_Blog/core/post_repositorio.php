@@ -11,18 +11,18 @@ foreach($_POST as $indice => $dado) {
 }
 
 foreach($_GET as $indice => $dado) {
-    $$indice = limparDados($dados);
+    $$indice = limparDados($dado);
 }
 
 $id = (int)$id;
 
-switch($acao){
+switch($acao) {
     case 'insert':
-        $dados =[
+        $dados = [
             'titulo' => $titulo,
             'texto' => $texto,
             'data_postagem' => "$data_postagem $hora_postagem",
-            'usuario_id' => $_SESSION['login']['usuario']['id']
+            'usuario_id' => $_SESSION['login'] ['usuario'] ['id']
         ];
 
         insere(
@@ -31,38 +31,38 @@ switch($acao){
         );
 
         break;
+    case 'update':
+        $dados = [
+            'titulo' => $titulo,
+            'texto' => $texto,
+            'data_postagem' => "$data_postagem $hora_postagem",
+            'usuario_id' => $_SESSION['login'] ['usuario'] ['id']
+        ];
 
-        case 'update':
-            $dados = [
-                'titulo' => $titulo,
-                'texto' => $texto,
-                'data_postagem' => "$data_postagem $hora_postagem",
-                'usuario_id' => $_SESSION['login']['usuario']['id']
-            ];
+        $criterio = [
+            ['id', '=', $id]
+        ];
 
-            $criterio = [
-                ['id', '=', $id]
-            ];
+        atualiza(
+            'post',
+            $dados,
+            $criterio
+        );
 
-            atualiza(
-                'post',
-                $dados,
-                $criterio
-            );
+        break;
+    case 'delete':
+        $criterio = [
+            ['id', '=', $id]
+        ];
 
-            break;
-
-            case 'delete':
-                $criterio = [
-                    ['id', '=', $id]
-                ];
-
-                deleta(
-                    'post',
-                    $criterio
-                );
-
-                break;
+        deleta(
+            'post',
+            $criterio
+        );
+        
+        break;
 }
 
 header('Location: ../index.php');
+
+?>
