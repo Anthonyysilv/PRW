@@ -56,7 +56,7 @@
             }
         }
         if(!empty($ordem)) {
-            $instrucao .= "ORDER BY $ordem";
+            $instrucao .= " ORDER BY $ordem";
         }
         return $instrucao;
     }
