@@ -8,7 +8,7 @@
         $valores = implode(', ', array_values($dados));
 
         $instrucao .= "({$campos})";
-        $instrucao .= "VALUES ({$valores})";
+        $instrucao .= " VALUES ({$valores})";
         return $instrucao;
     }
     function update(string $entidade, array $dados, array $criterio = []) : string
@@ -19,7 +19,7 @@
             $set[] = "{$campo} = {$dado}";
         }
 
-        $instrucao .= 'SET '.implode(', ', $set);
+        $instrucao .= ' SET '.implode(', ', $set);
 
         if(!empty($criterio)) {
             $instrucao .= ' WHERE ';
